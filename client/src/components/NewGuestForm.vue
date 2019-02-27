@@ -44,10 +44,28 @@ export default {
       })
         .then(response => response.json())
         .then(data => eventBus.$emit('guest-added', data))
+        .then(this.resetForm())
+    },
+    resetForm(){
+      this.newGuest.name = this.newGuest.email = "";
+      this.newGuest.checkedIn = false;
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
+
+#form-wrapper {
+  font-family: 'Roboto', sans-serif;
+}
+
+label {
+  margin: 5px;
+}
+
+input {
+  margin-right: 30px;
+}
+
 </style>

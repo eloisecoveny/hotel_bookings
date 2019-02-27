@@ -1,9 +1,15 @@
 <template lang="html">
   <div id="app">
-    <h1>Hotel</h1>
-    <new-guest-form></new-guest-form>
-    {{ checkIn }}
-    <checked-in-guest-list :guests="guests"></checked-in-guest-list>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Oswald" rel="stylesheet">
+    <h1>Hill St. Hotel</h1>
+
+    <div id="nav">
+      <new-guest-form></new-guest-form>
+    </div>
+
+    <div id="guest-grid">
+      <checked-in-guest-list :guests="guests"></checked-in-guest-list>
+    </div>
   </div>
 
 </template>
@@ -42,14 +48,6 @@ export default {
         this.fetchData()
       })
   },
-  computed: {
-    checkIn(){
-      const checkedIn = this.guests.filter(guest => {
-        return guest.checkedIn === true
-      })
-      this.checkedInGuests = checkedIn
-    }
-  },
   methods: {
     fetchData(){
       fetch("http://localhost:3000/api/bookings/")
@@ -70,4 +68,30 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav {
+  background-color: rgb(226, 211, 124);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  margin: 40px;
+  color: rgb(196, 170, 25);
+}
+
+#guest-grid {
+  width: 80%;
+}
+
 </style>

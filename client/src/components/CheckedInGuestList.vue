@@ -17,4 +17,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#guest-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
 </style>
