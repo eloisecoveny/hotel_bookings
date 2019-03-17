@@ -6,6 +6,11 @@ The lab brief was to build a full-stack JavaScript Vue application for a hotel a
 
 [Project Brief](https://github.com/codeclan/g11_classnotes/blob/master/week_08/day_3/lab_hotel_checkins/lab_hotel_checkins.md)
 
+## Screen grabs
+
+![User Interface](./ScreenGrabs/Homepage.png)
+-> _user interface_
+
 ## Installation Setup
 
 [Client](./client/README.md)
