@@ -86,7 +86,8 @@ export default {
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 50px;
-  margin: 40px;
+  margin-top: 15px;
+  margin-bottom: 40px;
   color: rgb(196, 170, 25);
 }
 

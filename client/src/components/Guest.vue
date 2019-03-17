@@ -37,6 +37,7 @@ export default {
 <style lang="css" scoped>
 
 #guest-info {
+  box-sizing: border-box;
   padding: 15px;
   margin: 15px;
   width: 250px;
